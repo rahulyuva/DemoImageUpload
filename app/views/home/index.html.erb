@@ -1,21 +1,48 @@
 <div class="inner-contaier">
-  <div class="col-md-10 col-md-offset-1">
-    <!-- layouts show -->
-    <%= render 'photo_list' %>
-    <!-- layouts show end-->
-
-    <!-- Upload form -->
-    <div>
-      <%= form_for @photo, :url => upload_photo_home_index_path, :html => { class: "upload-photo" } do |form| %>
-          <div id='file_browse_wrapper'>
-            <div class="form-group">
-              <%= form.file_field :avatar, id: 'file_browse' %>
-              <%#= form.submit "Upload", class: "btn btn-primary" %>
-            </div>
-          </div>
-      <% end %>
+  <div class="top-section">
+    <h1><center>Replace with <span>any nice</span></center></h1>
+    <p>A fast and easy way to capture your claim photos and documents!</p>
+    <div class="border-box">
+      <div class="border-box-half"></div>
     </div>
-    <!-- Upload form end -->
+  </div>
+  <div class="image-details">
+    <p>Claim No: 2</p>
+    <p>Arslan Ahmad</p>
+    <h1>Photo upload/Capture</h1>
+  </div>
+  <div class="image-box-wrapper">
+    <div class="col-md-12">
+
+      <!-- layouts show -->
+      <%= render 'photo_list' %>
+      <!-- layouts show end-->
+
+      <!-- Upload form -->
+      <div class="clearfix"></div>
+      <div class="row">
+        <div class="col-md-4 col-md-6">
+          
+          <%= form_for @photo, :url => upload_photo_home_index_path, :html => { class: "upload-photo" } do |form| %>
+              <div class="fileUpload">
+                <span class="custom-span">+</span>
+                <p class="custom-para">Add Images</p>
+                
+                <%= form.file_field :avatar, id: 'file_browse', class: 'upload' %>
+              </div>
+
+          <% end %>
+        </div>
+      </div>
+      <!-- Upload form end -->
+    </div>
+  </div>
+  <div class="terms-box">
+    <label class="check">I agree the <a href="#">Terms & Conditions</a>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    </label>
+    <button class="btn btn-submit">Send</button>
   </div>
 </div>
 
