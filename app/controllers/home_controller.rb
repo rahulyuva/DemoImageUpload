@@ -18,7 +18,7 @@ class HomeController < ApplicationController
   end
 
   private
-
+  # permit parameters
   def photo_params
     params.require(:photo).permit(:avatar)
   end

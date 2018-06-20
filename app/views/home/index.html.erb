@@ -5,15 +5,18 @@
     <!-- layouts show end-->
 
     <!-- Upload form -->
-    <div class="form-container">
-       <h4>Upload Photos</h4> 
+    <div>
       <%= form_for @photo, :url => upload_photo_home_index_path, :html => { class: "upload-photo" } do |form| %>
-          <div class="form-group">
-            <%= form.file_field :avatar %>
-            <%= form.submit "Upload", class: "btn btn-primary" %>
+          <div id='file_browse_wrapper'>
+            <div class="form-group">
+              <%= form.file_field :avatar, id: 'file_browse' %>
+              <%#= form.submit "Upload", class: "btn btn-primary" %>
+            </div>
           </div>
       <% end %>
     </div>
     <!-- Upload form end -->
   </div>
 </div>
+
+<%= javascript_include_tag "home.js" %>
