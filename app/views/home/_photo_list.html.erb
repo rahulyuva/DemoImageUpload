@@ -1,0 +1,14 @@
+<div class="row">
+  <% @photos.each do |photo| %>
+    <div class="col-md-6">
+      <div class="inner-6">  
+        <div class="img-box">
+          <%= image_tag photo.avatar.url %>
+        </div>
+        <div class="content">
+          <h4><%= photo.avatar_file_name %></h4>
+        </div>
+      </div>  
+    </div> 
+  <% end %>
+</div>

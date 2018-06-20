@@ -1,0 +1,19 @@
+<div class="inner-contaier">
+  <div class="col-md-10 col-md-offset-1">
+    <!-- layouts show -->
+    <%= render 'photo_list' %>
+    <!-- layouts show end-->
+
+    <!-- Upload form -->
+    <div class="form-container">
+       <h4>Upload Photos</h4> 
+      <%= form_for @photo, :url => upload_photo_home_index_path, :html => { class: "upload-photo" } do |form| %>
+          <div class="form-group">
+            <%= form.file_field :avatar %>
+            <%= form.submit "Upload", class: "btn btn-primary" %>
+          </div>
+      <% end %>
+    </div>
+    <!-- Upload form end -->
+  </div>
+</div>
