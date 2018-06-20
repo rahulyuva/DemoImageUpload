@@ -1,11 +1,7 @@
-#   Ensure the mysql2 gem is defined in your Gemfile
-#   gem 'mysql2'
+#   Ensure the pg gem is defined in your Gemfile
+#   gem 'pg'
 #
 default: &default
-  # adapter: mysql2
-  # encoding: utf8
-  # username: root
-  # password: root
   host: localhost
   adapter: postgresql
   encoding: unicode
